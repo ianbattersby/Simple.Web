@@ -63,7 +63,7 @@ namespace Simple.Web.JsonFx
                 byte[] buffer;
                 using (var writer = new StringWriter())
                 {
-                    var dataWriterSettings = new DataWriterSettings(new CustomResolverStrategy(),
+                    var dataWriterSettings = new DataWriterSettings(new MonoCompatResolverStrategy(),
                                                                     new Iso8601DateFilter());
 
                     new JsonWriter(dataWriterSettings).Write(output, writer);
